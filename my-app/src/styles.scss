@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: "awesome-font";
+  src: url("assets/fonts/minecraft.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "awesome-font", serif;
+  color: whitesmoke;
+}
+
+html, body, .wrapper{
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.block {
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  border: cornflowerblue 3px solid;
+  padding: 10px;
+}
+
+.field {
+  margin: 10px;
+}
+
+input, button {
+  background-color: dimgray;
+}
+
+.block {
+  border-color: blueviolet;
+}
+
+section {
+  background: url("assets/img/gold.webp") center center/128px 128px space,
+  url("assets/img/stone.png") center center/100px 100px repeat;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-block {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}

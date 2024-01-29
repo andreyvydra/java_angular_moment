@@ -1,0 +1,18 @@
+.header-info > h2 {
+  font-size: 24pt;
+  font-style: italic;
+}
+
+header {
+  min-height: 100px;
+  min-width: 100%;
+  background: url("../../../assets/img/dirt.jpg") center center/100px 100px repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diamond {
+  width: 64px;
+  height: 64px;
+}

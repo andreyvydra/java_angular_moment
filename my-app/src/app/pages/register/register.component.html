@@ -1,0 +1,21 @@
+<div class="block">
+  <h2>Регистрация</h2>
+  <form>
+    <div class="field">
+      <label for="login">Логин: </label><br>
+      <input id="login" name="login" [(ngModel)]="form.username"><br>
+    </div>
+    <div class="field">
+      <label for="password">Пароль: </label><br>
+      <input id="password" name="password" [(ngModel)]="form.password" type="password"><br>
+    </div>
+    <div class="field">
+      <label for="passwordConfirmation">Подтверждение: </label><br>
+      <input id="passwordConfirmation" name="passwordConfirmation" [(ngModel)]="form.passwordConfirmation" type="password"><br>
+    </div>
+    <div class="field">
+      <button type="submit" (click)="this.onSubmit()">Зарегистрироваться</button>
+    </div>
+  </form>
+  <a [routerLink]="['/login']">Уже есть аккаунт?</a>
+</div>

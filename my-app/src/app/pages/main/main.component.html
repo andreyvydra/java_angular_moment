@@ -1,0 +1,101 @@
+<div class="main-block">
+
+  <article class="first-article">
+    <div class="block field">
+      <canvas #graphCanvas id="graph-canvas" width="250px" height="250px" (click)="onClick($event)"></canvas>
+    </div>
+
+    <div class="block input">
+      <form (submit)="onSubmit()">
+        <div class="radio-input">
+          X:
+          <label>
+            <input name="x" type="radio" value="-4" [(ngModel)]="form.x">
+            <span>-4</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="-3" [(ngModel)]="form.x">
+            <span>-3</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="-2" [(ngModel)]="form.x">
+            <span>-2</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="-1" [(ngModel)]="form.x">
+            <span>-1</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="0" [(ngModel)]="form.x">
+            <span>0</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="1" [(ngModel)]="form.x">
+            <span>1</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="2" [(ngModel)]="form.x">
+            <span>2</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="3" [(ngModel)]="form.x">
+            <span>3</span>
+          </label>
+          <label>
+            <input name="x" type="radio" value="4" [(ngModel)]="form.x">
+            <span>4</span>
+          </label>
+        </div>
+
+        <label for="y">Y:</label>
+        <input id="y" name="y" [(ngModel)]="form.y"><br>
+
+        <div class="radio-input">
+          R:
+          <label>
+            <input name="r" type="radio" value="1" (change)="updateGraph()" [(ngModel)]="form.r">
+            <span>1</span>
+          </label>
+          <label>
+            <input name="r" type="radio" value="2" (change)="updateGraph()" [(ngModel)]="form.r">
+            <span>2</span>
+          </label>
+          <label>
+            <input name="r" type="radio" value="3" (change)="updateGraph()" [(ngModel)]="form.r">
+            <span>3</span>
+          </label>
+          <label>
+            <input name="r" type="radio" value="4" (change)="updateGraph()" [(ngModel)]="form.r" >
+            <span>4</span>
+          </label>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="block">
+      <button (click)="logout()">Выйти из аккаунта</button>
+    </div>
+  </article>
+  <article class="second-article">
+    <div class="block results">
+      <table class="table-results">
+        <tr>
+          <th>ID</th>
+          <th>X</th>
+          <th>Y</th>
+          <th>R</th>
+          <th>Время отправки</th>
+          <th>Результат</th>
+        </tr>
+        <tr *ngFor="let shot of shots">
+          <td>{{shot.id}}</td>
+          <td>{{shot.x}}</td>
+          <td>{{shot.y}}</td>
+          <td>{{shot.r}}</td>
+          <td>{{shot.shotTime}}</td>
+          <td>{{shot.inArea}}</td>
+        </tr>
+      </table>
+    </div>
+  </article>
+</div>

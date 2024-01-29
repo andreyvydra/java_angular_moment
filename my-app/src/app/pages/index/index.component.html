@@ -1,0 +1,8 @@
+<div class="block" *ngIf="userService.isLoggedIn">
+  <p>Привет, {{userService.username}}!</p>
+  <a [routerLink]="['/main']">Страница с точками</a>
+</div>
+<div  class="block" *ngIf="!userService.isLoggedIn">
+  <p>Привет, незнакомец!</p>
+  <a [routerLink]="['/login']">Войти</a>
+</div>
